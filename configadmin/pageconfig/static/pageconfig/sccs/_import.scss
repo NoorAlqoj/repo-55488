@@ -1,0 +1,21 @@
+// CORE
+// basic building blocks, typically single html tags
+
+
+@import 'core/_button.scss';
+@import 'core/_typography';
+@import 'core/figure';
+//@import 'core/input';
+@import 'core/label';
+@import 'core/form';
+@import 'common/_common';
+//@import 'core/table';
+
+
+
+// LAYOUT
+// distinct section of an interface
+
+@import 'layout/_site-header';
+@import 'layout/_site-footer';
+

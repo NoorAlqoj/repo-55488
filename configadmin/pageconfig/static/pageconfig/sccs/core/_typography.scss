@@ -1,0 +1,106 @@
+/*
+
+	Basic, low level typography
+
+*/
+
+$typography-elems:
+	'p',
+	'ul',
+	'ol';
+
+$media-elems:
+	'.blockquote',
+	'.button-wrapper',
+	'.media',
+	'.table-wrapper';
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: 500;
+}
+
+h1 {
+	@include font-size($h--1);
+}
+
+h2 {
+	@include font-size($h--2);
+}
+
+h3 {
+	@include font-size($h--3);
+}
+
+h4 {
+	font-size:rem(18px);
+	color: #212121;
+	font-weight:400;
+	margin-bottom:rem(30px);
+}
+
+h5 {
+	font-size:rem(16px);
+	color: $black;
+	font-weight:500;
+	margin-bottom:rem(20px);
+}
+
+h6 {
+	font-size:rem(15px);
+	margin-bottom:rem(30px);
+	color:#005e86;
+	line-height:1.5;
+}
+
+
+// Basic typography styling
+#{$typography-elems},
+#{$media-elems} {
+	margin-bottom: $rel-spacing-unit;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ol,
+ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+p{
+	line-height: 1.5;
+	margin-bottom: $spacing-unit--medium;
+}
+
+
+// Stylistic elements
+b,
+strong {
+	font-weight: $w--bold;
+}
+
+small {
+	font-size: 80%;
+}
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media screen and (min-width:1200px){
+	
+	.container{max-width: 1200px;}
+}
