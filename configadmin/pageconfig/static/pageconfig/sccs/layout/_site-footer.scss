@@ -1,0 +1,143 @@
+.footer-wrapper{
+	background-color: $white;
+	padding:rem(55px) 0 0 0;
+	position:relative;
+
+	footer{
+		padding-bottom: rem(12px);
+		color: #9d9d9d;
+		font-size: rem(13px);
+		font-weight: 500;
+		letter-spacing: 0.5px;
+
+		p {
+			line-height: normal;
+		}
+		
+		
+		ul{
+			li{
+				&:not(:last-child){
+					margin-bottom:rem(16px);
+				}
+				a{
+					color: #9d9d9d;
+					font-size: rem(13px);
+					font-weight: 500;
+
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+			&.contact-info {
+				li {
+					display: flex;
+    				align-items: flex-start;
+					line-height: normal;
+					&:not(:last-child){
+						margin-bottom:rem(8px);
+					}
+					img {
+						margin-right: 6px;
+					}
+				}
+			}
+		}
+		.partners {
+			ul {
+				li {
+					a {
+						margin-right: rem(27px);
+							&:hover {
+								opacity: .7;
+								filter: drop-shadow(2px 4px 6px black);
+							}
+					}
+				}
+			}
+		}
+		
+	}
+	.copyright{
+		padding:rem(20px) 0;
+		color: $black;
+		font-weight: 500;
+		font-size:rem(16px);
+		border-top: 1px solid #c6c6c6;
+	}
+}
+
+
+.social-icons {
+	display: flex;
+	li{
+		&:not(:last-child){
+			margin-right:rem(19px);
+		}
+		a {
+			width: 25px;
+		    height: 25px;
+		    background-color: $primary;
+		    border-radius: 50px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    color: $white!important;
+		    font-size: rem(15px)!important;
+		    	&:hover {
+		    		color: $red!important;
+		    		opacity: .8;
+		    	}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.footer-wrapper {
+		footer {
+			.contact-info {
+				li {
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer-wrapper {
+		footer {
+			.partners {
+				margin: 15px 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.footer-wrapper {
+		padding-top: 0.4375rem;
+		footer {
+			text-align: center;
+			.social-icons {
+				justify-content: center;
+			}
+			.contact-info {
+				li {
+					justify-content: center;
+				}
+			}
+			.partners {
+				margin: 0;
+			}
+			.row {
+				> div {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+}

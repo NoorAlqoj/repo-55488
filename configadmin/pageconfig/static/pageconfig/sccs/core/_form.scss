@@ -1,0 +1,317 @@
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+select,
+textarea {
+    appearance: none;
+    background-clip: border-box;
+    margin: 0;
+    outline: 0;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    width: auto;
+    height: auto;
+}
+
+input[type='checkbox'] {
+    appearance: checkbox;
+}
+
+input[type='radio'] {
+    appearance: radio;
+}
+
+textarea,
+select[size],
+select[multiple] {
+    height: auto;
+}
+
+// button
+button {
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+.button {
+    cursor: pointer;
+    display: inline-block;
+    font: normal 16px/1 sans-serif;
+    outline: 0;
+    overflow: visible;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: auto;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+// disabled states
+[disabled],
+[disabled] * {
+    box-shadow: none;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+form {
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: rem(45px);
+    position: relative;
+    // &.telephone {
+    //     display: flex;
+    //     .bootstrap-select {
+    //         min-width: 80px;
+    //         width: auto!important;
+    //         margin-right: rem(15px);
+    //     }
+    // }
+}
+
+.control-label {
+    font-weight: 400;
+    font-size: rem(12px);
+    display: block;
+    text-align: left;
+    padding-bottom: rem(8px);
+    margin-bottom: 0px;
+    color: $darkgrey;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 10;
+    span {
+        color: #78a4d6;
+        font-size: rem(14px);
+    }
+}
+
+.form-control {
+    position: relative;
+    height: 40px;
+    font-size: rem(16px);
+    color: $black;
+    background-color: white;
+    outline: none;
+    padding: 0px;
+    padding-left: 0;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #afafaf;
+    border-radius: 0;
+    opacity: 1;
+    padding-right: rem(13px);
+    transition: all 0.2s;
+    touch-action: manipulation;
+    &.active {
+        outline: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    &::placeholder {
+        opacity: 1;
+        color: #999999!important;
+        font-size: rem(12px);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-radius: 0px;
+        border-color: $primary;
+        color: #000;
+    }
+    &:read-only {
+        border: 1px solid #dbdde4;
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 8%, rgba(255, 255, 255, 1) 8%, rgba(242, 244, 248, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 8%, rgba(255, 255, 255, 1) 8%, rgba(242, 244, 248, 1) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 8%, rgba(255, 255, 255, 1) 8%, rgba(242, 244, 248, 1) 100%);
+        // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f4f8', GradientType=0);
+    }
+}
+
+//.form-control:focus~label,
+//.static-label {
+//    top: -20px;
+//    left: 0;
+//}
+.form-control:placeholder-shown+label {
+    cursor: text;
+    //max-width: 66.66%;
+    //white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 10px) scale(1.1);
+}
+
+.form-control:not(:placeholder-shown)+label,
+.form-control:not(:placeholder-shown)+label,
+.form-control:focus+label {
+    transform: translate(0, -25px) scale(1);
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    opacity: 0 !important;
+    transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0 !important;
+    transition: inherit;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+::-moz-placeholder {
+    opacity: 0 !important;
+    transition: inherit;
+}
+
+.form-control:-ms-input-placeholder {
+    color: transparent!important;
+    transition: inherit!important;
+}
+
+.form-control:-moz-placeholder {
+    color: transparent!important;
+    transition: inherit!important;
+}
+
+// for firefox
+//css for ie
+.form-control:-ms-input-placeholder+label {
+    cursor: text!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    transform-origin: left bottom!important;
+    transform: translate(0px, 10px) scale(1.1)!important;
+}
+
+.form-control:not(:-ms-input-placeholder)+label,
+.form-control:not(:-ms-input-placeholder)+label,
+.form-control:focus+label {
+    transform: translate(0px, -25px) scale(1)!important;
+    cursor: pointer!important;
+}
+
+.form-control:-moz-placeholder+label {
+    cursor: text!important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //transform-origin: left bottom;
+    transform: translate(0px, 10px) scale(1.1);
+}
+
+//css for ie
+// for firefox
+.static-label {
+    top: -20px;
+    left: 0;
+    transform: none !important;
+}
+
+.datepicker {
+    .calendar-icon {
+        position: absolute;
+        background: $white url(../images/icons.png) -92px -94px no-repeat;
+        width: 17px;
+        height: 17px;
+        right: 2px;
+        bottom: 8px;
+    }
+}
+
+.phone {
+    .form-control {
+        padding-left: 40px;
+    }
+    span {
+        position: absolute;
+        bottom: 8px;
+        font-size: rem(14px);
+        border-right: solid 1px #959595;
+        padding-right: 5px;
+    }
+}
+
+textarea {
+    &.form-control {
+        resize: none;
+        height: rem(85px);
+        padding: 0;
+        padding-right: rem(13px);
+        border: 0;
+        border-bottom: 1px solid #afafaf;
+        border-radius: 0;
+        &:focus {}
+    }
+}
+
+.container-small {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+p.sub-title {
+    color: $primary;
+    font-size: rem(16px);
+    text-transform: uppercase;
+    margin-bottom: rem(40px);
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-heading {
+    color: #000;
+    font-size: rem(20px);
+    span {
+        font-size: rem(14px);
+        font-style: italic;
+    }
+}
+
+.radio-heading {
+    margin-right: rem(20px);
+}
+
+.col-gap-80 {
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.col-gap-80>div {
+    padding-left: 40px;
+    padding-right: 40px;
+}

@@ -1,0 +1,402 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Q8Trio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link href="src/css/jquery.mCustomScrollbar.css" rel="stylesheet"> -->
+    <link href="{% static 'pageconfig/css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'pageconfig/css/bootstrap-select.css' %}" rel="stylesheet">
+    <!-- <link href="src/css/select2.css" rel="stylesheet" type="text/css"> -->
+    <link href="{% static 'pageconfig/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'pageconfig/css/menu.css' %}  rel="stylesheet">
+    <link href="{% static 'pageconfig/css/dropzone.css' %} " rel="stylesheet">
+    <link href="{% static 'pageconfig/css/bootstrap-datetimepicker.css' %}  " rel="stylesheet">
+    <link href="{% static 'pageconfig/css/main.css' %}  " type="text/css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.mousewheel.min.js"></script> -->
+    <script src="{% static 'pageconfig/js/wow.js' %}  "></script>
+    <script src="{% static 'pageconfig/js/slick.js' %}"></script>
+    <script src="{% static 'pageconfig/js/bootstrap-select.js' %}"></script>
+    <!-- <script src="src/js/select2.js"></script> -->
+    <script src="{% static 'pageconfig/js/menu.js' %}"></script>
+    <script src="{% static 'pageconfig/js/dropzone.js' %}"></script>
+    <script src="{% static 'pageconfig/js/moment.min.js' %}"></script>
+    <script src="{% static 'pageconfig/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+    <!-- Full Calenar assets -->
+    <link href="{% static 'pageconfig/fullcalendar/core/main.css' %}" rel='stylesheet' />
+    <link href="{% static 'pageconfig/fullcalendar/daygrid/main.css' %}" rel='stylesheet' />
+    <link href="{% static 'pageconfig/fullcalendar/timegrid/main.css' %}" rel='stylesheet' />
+    <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+    <script src="{% static 'pageconfig/fullcalendar/core/main.js' %}"></script>
+    <script src="{% static 'pageconfig/fullcalendar/interaction/main.js' %}"></script>
+    <script src="{% static 'pageconfig/fullcalendar/daygrid//main.js' %}"></script>
+    <script src="{% static 'pageconfig/fullcalendar/timegrid/main.js' %}"></script>
+
+    <script src="{% static 'pageconfig/js/custom.js' %}"></script>
+</head>
+
+</head>
+<body>
+
+<div class="modal custom-modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <span class="popup-cross-icon" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-times"></i>
+            </span>
+            <div class="modal-body">
+                Modal contents
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade medium" id="login" tabindex="-2" role="dialog" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <span class="popup-cross-icon" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-times"></i>
+            </span>
+            <div class="modal-body p-0 m-0">
+                <div class="account-wrapper">
+                    <div class="row m-0">
+                        <div class="col-md-4 p-0">
+                            <div class="left-side"
+                                <img src="{% static 'pageconfig/images/login-bg.png' %}  " alt="">
+                                <div class="content">
+                                    <h1>Login</h1>
+                                    <p>Get access to <br> your Orders, <br> Profile and More</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 p-0">
+                            <div class="right-side">
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" value="Johnsmith@gmail.com" name="name" placeholder="Enter Email">
+                                    <label class="control-label">Enter Email</label>
+                                    <span class="icon"><img src="src/images/svg/modal-email.svg" alt=""></span>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="password" class="form-control" value="*********" name="name" placeholder="Enter Password">
+                                    <label class="control-label">Enter Password</label>
+                                    <span class="icon"><img src="src/images/svg/modal-password.svg" alt=""></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-primary">Login</a>
+                                    <a href="#" class="btn forgot-pass">Forgot Password?</a>
+                                </div>
+                                <div class="create-account">
+                                    <p>
+                                    New to Q8Trio? <br>
+                                        <a href="#">Create an Account</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade small" id="forgot" tabindex="-2" role="dialog" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <span class="popup-cross-icon" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-times"></i>
+            </span>
+            <div class="modal-body">
+                <div class="forgot-pass">
+                    <div class="inner-spacing">
+                        <h2 class="modal-head">Forgot Password</h2>
+                            <p>Enter your email address below. We'll send you an email with a link to reset your password.</p>
+                            <form class="login-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="button-row">
+                                    <a href="#" class="btn btn-primary">Reset Password</a>
+                                </div>
+                            </form>
+                            <p class="account-login">Know your password?<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signin"><b>Log in</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="cd-lateral-nav d-none show-on-md">
+    <a href="#" class="back">
+        <i class="material-icons">keyboard_arrow_left</i>
+        BACK
+    </a>
+    <ul class="cd-navigation list-unstyled">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Make a Request</a></li>
+        <li><a href="#" >Contact Us</a></li>
+        <li class="login" data-toggle="modal" data-target="#login"><a href="#">Login</a></li>
+        <li class="register"><a href="#">Register</a></li>
+        <li class="welcome-user">
+                                <div class="name">
+                                    <span>Welcome</span>
+                                    John Smith
+                                </div>
+                                <a href="#" class="icon">
+                                    <!-- <img src="src/images/svg/settings-icon.svg" alt=""> -->
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </a>
+                            </li>
+    </ul>
+</nav>
+<div class="wrapper mp-pusher">
+    <header>
+        <div class="container">
+            <div class="row justify-content-between align-items-center text-right">
+                <div class="col-sm-3 col-12 text-left">
+
+                    <a href="#"><img src="{% static 'pageconfig/images/trio-logo.png' %}" ></a>
+                </div>
+                <div class="col-sm-9 col-12">
+                    <div class="social-icons d-inline-flex align-items-center justify-content-end">
+
+                        <ul class="social-icons list-inline list-unstyled d-flex align-items-center">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="lang-selector">
+                            <select class="selectpicker">
+                                <option>English</option>
+                                <option>Arabic</option>
+                            </select>
+                        </div>
+                        <button class="menu-icon cd-menu-trigger d-none show-on-md">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <nav>
+                        <ul class="hide-on-md">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Make a Request</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#login">Contact Us</a></li>
+                            <li class="welcome-user">
+                                <div class="name">
+                                    <span>Welcome</span>
+                                    John Smith
+                                </div>
+                                <a href="#" class="icon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="register"><a href="#">Logout</a></li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<div class="content-wrapper">
+    <div class="main-banner">
+        <div class="slick-instance" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "fade": true, "infinite": true, "autoplay": false, "arrows": true, "dots": false}'>
+          {% for slide in slides %}
+
+            <div class="slide">
+                <img src="{{ slide.background_image.url }}" >
+				<div class="caption">
+					<div class="container">
+						<h1>{{ slide.title }}</h1>
+						<p>{{ slide.paragraph }}</p>
+						<div class="button-row text-left">
+							<a href="#" class="btn btn-primary">{{ slide.button_label }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            {% endfor %}
+            <!-- mp4 video -->
+            <div class="slide video" data-type="mp4" data-video="https://www.youtube.com/embed/YA_pfn6_iOg">
+                <img src="src/images/main-banner.jpg" alt="">
+                <video>
+                    <source src="src/video/samplevideo.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <!-- mp4 video -->
+        </div>
+    </div>
+    <section class="how-it-works">
+        {% for how_it_work in how_it_works %}
+        <div class="container">
+            <h2>{{ how_it_work.title }}</h2>
+            <p class="sub-line">{{ how_it_work.description }}</p>
+              <div class="steps">
+            {% for how_step in how_it_work.howstep_set.all %}
+                 <div class="">
+                    <span>step {{ forloop.counter }}</span>
+                    <div class="icon">
+                        <img src="{{how_step.icon_image.url}}" alt="">
+                    </div>
+                    <p class="title">{{ how_step.title }}</p>
+                    <p>{{ how_step.description}}</p>
+                </div>
+
+            {% endfor %}
+              </div>
+        </div>
+        {% endfor %}
+
+    </section>
+    <section class="clients-trust">
+       <div class="container">
+           {% for client in clients %}
+               <h2>{{ client.title }}</h2>
+            <p class="sub-line">{{client.description }}</p>
+
+            <div class="slick-instance" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "fade": false, "infinite": true, "arrows": true, "dots": false ,
+            "responsive": [
+                {"breakpoint": 992, "settings": {"slidesToShow": 3}},{"breakpoint": 600, "settings": {"slidesToShow": 2}}
+                ]}'>
+
+                {% for icon in client.clienticon_set.all %}
+
+                <div class="slide">
+                    <div class="inner">
+                        <img src="{{ icon.logo_image.url }}" alt="">
+                    </div>
+                </div>
+
+                {% endfor %}
+
+
+
+           {% endfor %}
+       </div>
+    </section>
+</div>
+
+	<div class="footer-wrapper">
+		<div class="container">
+			<footer>
+				<div class="row">
+					<div class="col-md-3 col-sm-4">
+						<div class="logo">
+							<img src="src/images/TRIO-footer.png" alt="">
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+						</p>
+						<ul class="social-icons">
+		                    <li>
+		                        <a href="#">
+		                        	<i class="fab fa-facebook-f"></i>
+		                        </a>
+		                    </li>
+		                    <li>
+		                        <a href="#">
+		                        	<i class="fab fa-twitter"></i>
+		                        </a>
+		                    </li>
+		                    <li>
+		                        <a href="#">
+		                        	<i class="fab fa-dribbble"></i>
+		                        </a>
+		                    </li>
+		                    <li>
+		                        <a href="#">
+		                        	<i class="fab fa-behance"></i>
+		                        </a>
+		                    </li>
+		                </ul>
+					</div>
+
+
+
+
+					<div class="col-md-3 col-sm-4">
+						<h5>Information Corner</h5>
+						<ul>
+                            {%for information_corner in information_corners %}
+
+							<li><a href="#">{{ information_corner.title }}</a></li>
+
+                            {% endfor %}
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-4">
+						<h5>Contact Info</h5>
+						<ul class="contact-info">
+                            {% for contact in contacts%}
+
+							<li><img src="{{contact.icon_image.url}}" alt=""> {{contact.contact_by}}</li>
+
+                            {% endfor %}
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="partners">
+							<h5>Partners</h5>
+                            <ul class="">
+                            {% for partner in partners %}
+
+								<li>
+									<a href="{{ partner.link }}">
+										<img src="{{ partner.logo_image.url }}" alt="">
+									</a>
+								</li>
+							{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="copyright text-center">
+				© 2019 copyright all right reserved
+			</div>
+		</div>
+	</div>
+
+ </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+header {
+    background: #fff;
+    
+    .social-icons {
+        background: #e1f6ff;
+        min-height: 60px;
+        // padding: 0px rem(15px);
+        padding-right: 16px;
+        padding-left: 13px;
+         li a {
+            width: 30px;
+            height: 30px;
+            font-size: rem(19px)!important;
+            color: #e1f6ff!important;
+         }
+        ul.list-inline {
+            // margin: 0px -10px;
+            padding-right: rem(45px);
+            li {
+                // padding: 0px 5px;
+                &:not(:last-child) {
+                    margin-right: rem(25px);
+                }
+                a {
+                    // background: $primary-color;
+                    // width: 30px;
+                    // height: 30px;
+                    // @include flex(center, center);
+                    // color: #fff;
+                    // border-radius: 50%;
+                    // font-size: rem(19px);
+                    &:hover {
+                        
+                        color: #e1f6ff!important;
+                    }
+                }
+            }
+        }
+    }
+    .lang-selector {
+        width: 185px;
+        .bootstrap-select {
+            >.dropdown-toggle {
+                background: $white;
+                border: 1px solid #2c3487;
+                border-radius: 5px;
+                height: 36px;
+                padding: 0 rem(15px);
+                &:after {
+                    right: 10px;
+                    background: url(../images/icons.png) 0px -110px no-repeat;
+                }
+                .filter-option-inner-inner {
+                    font-size: rem(14px);
+                    font-weight: 500;
+                    color: #2c3487;
+                    line-height: 33px;
+                }
+            }
+        }
+    }
+    nav {
+        padding: rem(20px) 0px;
+        ul {
+            @include flex(center, flex-end);
+            li {
+                padding-right: rem(50px);
+                a {
+                    font-size: rem(15px);
+                }
+                font-weight:500;
+                &:last-child {
+                    padding-right: 0px;
+                }
+                &.register,
+                &.login {
+                    text-align: center;
+                    padding: rem(10px) 0px;
+                    min-width: 110px;
+                    border: solid 2px $primary-color;
+                    border-radius: 5px;
+                    &:hover,
+                    &:focus {
+                        background: #2c3487;
+                        a {
+                            color: $white;
+                        }
+                    }
+                    a {
+                        padding-right: 0px;
+                        font-weight: 500;
+                        color: #2c3487;
+                        font-size: rem(15px);
+                    }
+                }
+                &.login {
+                    margin-right: rem(25px);
+                }
+            }
+        }
+    }
+    .menu-icon {
+        position: relative;
+        display: none;
+        margin-left: 15px;
+        span {
+            width: 25px;
+            height: 2px;
+            background: $primary;
+            display: block;
+            margin-bottom: 4px;
+            transition: all .3s;
+            margin-left: auto;
+            &:nth-child(3) {
+                width: 16px;
+                float: right;
+                position: relative;
+                right: 0;
+            }
+        }
+        &:hover {
+            span:nth-child(3) {
+                width: 25px;
+            }
+        }
+    }
+}
+
+.welcome-user {
+
+        display: flex;
+        align-items: center;
+        padding-right: rem(20px);
+        .name {
+            color: #2c3487;
+            font-size: rem(16px);
+            font-weight: 600;
+            span {
+                display: block;
+                font-size: rem(14px);
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+        }
+        .icon {
+            border: 1px solid #efefef;
+            border-radius: 100%;
+            padding: rem(8px);
+            margin-left: rem(15px);
+            font-size: rem(20px);
+            &:hover {
+                img {
+                    opacity: .7;
+                }
+            }
+        }
+}
+
+
+@media screen and (max-width: 1600px) {
+    header nav ul li a {
+        font-size: rem(14px);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        nav {
+            ul {
+                li {
+                    padding-right: 2.125rem;
+                    &.login {
+                        margin-right: 1.5rem;
+                        padding: 0.60rem 0px;
+                        min-width: 80px;
+                    }
+                    &.register {
+                        padding: 0.60rem 0px;
+                        min-width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .welcome-user {
+        padding: 15px 37px 15px 42px;
+    }
+}
+@media screen and (max-width: 575px) {
+    header {
+        nav {
+            padding: 1rem 0px;
+        }
+        .row {
+            >div {
+                &.text-left {
+                    margin: 1rem 0;
+                }
+                text-align: center!important;
+            }
+        }
+        .social-icons {
+            width: 100%;
+            justify-content: center!important;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        .social-icons {
+            ul {
+                &.list-inline {
+                    padding-right: 2rem;
+                    li {
+                        &:not(:last-child) {
+                            margin-right: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+        .lang-selector {
+            width: 115px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header {
+        .social-icons {
+            ul {
+                &.list-inline {
+                    padding-right: 1rem;
+                    li {
+                        &:not(:last-child) {
+                            margin-right: .6rem;
+                        }
+                    }
+                }
+            }
+        }
+        .lang-selector {
+            width: 85px;
+            .bootstrap-select>.dropdown-toggle {
+                padding: 0 0.6rem;
+                height: 32px;
+            }
+        }
+        .menu-icon {
+            margin-left: 10px;
+        }
+    }
+}

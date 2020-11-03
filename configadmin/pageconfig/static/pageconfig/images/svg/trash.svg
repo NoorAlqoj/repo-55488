@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #afafaf;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="delete.svg" class="cls-1" d="M1102,555.5v-2.333h4l1.14-1.167h5.72l1.14,1.167h4V555.5h-16Zm14.86,15.167a2.318,2.318,0,0,1-2.29,2.333h-9.14a2.318,2.318,0,0,1-2.29-2.333v-14h13.72v14Z" transform="translate(-1102 -552)"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg id="Location.svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9d9d9d;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Path_692" data-name="Path 692" class="cls-1" d="M944.366,1813a6.413,6.413,0,0,0-6.416,6.42c0,4.81,6.416,11.91,6.416,11.91s6.417-7.1,6.417-11.91A6.413,6.413,0,0,0,944.366,1813Zm0,8.71a2.29,2.29,0,1,1,2.292-2.29A2.294,2.294,0,0,1,944.366,1821.71Z" transform="translate(-933.375 -1811.16)"/>
+  <path id="Path_693" data-name="Path 693" class="cls-2" d="M933.366,1811.17h22v22h-22v-22Z" transform="translate(-933.375 -1811.16)"/>
+</svg>
